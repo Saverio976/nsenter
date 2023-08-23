@@ -62,6 +62,7 @@ jobs:
           ${{ env.REGISTRY_IMAGE }}:${{ steps.get_util_linux.outputs.version }}
           ${{ env.REGISTRY_IMAGE }}:latest
         push: true
+        registry: ${{ env.REGISTRY }}
 
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
