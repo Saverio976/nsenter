@@ -1,4 +1,6 @@
-FROM debian:12-slim as builder
+from debian:12-slim as base
+
+FROM base as builder
 
 # intall gcc and supporting packages
 RUN apt-get update          \
@@ -27,8 +29,8 @@ RUN ./autogen.sh    \
     && make LDFLAGS="--static" nsenter
 
 # Final image
-FROM scratch
+FROM base
 
 COPY --from=builder /code/util-linux/nsenter /
 
-ENTRYPOINT ["/nsenter"]
+CMD ["/nsenter"]
