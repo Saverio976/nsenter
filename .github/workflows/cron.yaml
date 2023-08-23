@@ -17,7 +17,7 @@ jobs:
         tag=$(curl --silent https://api.github.com/repos/${GITHUB_REPOSITORY}/git/refs/tags | jq -r '.[-1].ref' | awk -F/ '{print $NF}')
         echo "::debug::git repository tag ${tag}"
         echo "::set-output name=tag::${tag}"
-      
+
     - name: Get util-linux version
       id: get_util_linux
       run: |
@@ -32,5 +32,3 @@ jobs:
       with:
         repo-token: ${{ secrets.CR_PAT }}
         tag: ${{steps.get_util_linux.outputs.version}}
-
-        
