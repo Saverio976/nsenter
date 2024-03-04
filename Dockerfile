@@ -35,7 +35,7 @@ FROM base
 
 COPY --from=builder /code/util-linux/nsenter /
 
-COPY find-big-containers.sh /usr/local/bin/find-big-containers.sh
-run chmod +x /usr/local/bin/find-big-containers.sh
+COPY find-big-containers.sh /find-big-containers.sh
+run chmod +x /find-big-containers.sh
 
 CMD ["/nsenter"]
