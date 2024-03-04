@@ -1,8 +1,9 @@
 Fork of https://github.com/alexei-led/nsenter
 
 - **Please use the original instead (https://github.com/alexei-led/nsenter)**
-- I changed all occurence of alexeiled to saverio976
-- I added `./find-big-containers.sh`
+- Changed all occurence of alexeiled to saverio976
+- Added `./find-big-containers.sh`
+- Added -j2 in compilation of util-linux
 
 ------------------------------------------------------------------------------
 
