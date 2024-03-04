@@ -13,6 +13,7 @@ RUN apt-get update          \
         libtool             \
         automake            \
         pkg-config          \
+        flex                \
     && rm -rf /var/lib/apt
 
 WORKDIR /code
