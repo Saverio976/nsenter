@@ -28,7 +28,7 @@ RUN tar -xf v${UTIL_LINUX_VER}.tar.gz && mv util-linux-${UTIL_LINUX_VER} util-li
 WORKDIR /code/util-linux
 RUN ./autogen.sh    \
     && ./configure  \
-    && make LDFLAGS="--static" nsenter
+    && make LDFLAGS="--static" -j2 nsenter
 
 # Final image
 FROM base

@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+DIR="$1"
+
 function get_big_folders() {
     echo 'Get big folders' >&2
 
