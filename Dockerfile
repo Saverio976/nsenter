@@ -14,6 +14,7 @@ RUN apt-get update          \
         automake            \
         pkg-config          \
         flex                \
+        libsqlite3-dev      \
     && rm -rf /var/lib/apt
 
 WORKDIR /code
